@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home', [
-        "title" => "Home Page"
-    ]);
-});
+Route::get('/', [MainController::class, 'index']);
+Route::get('/about', [MainController::class, 'about']);
+Route::get('/book', [MainController::class, 'book']);
+Route::get('/detailBook/{book:slug}', [MainController::class, 'detailBook']);
+Route::get('/video', [MainController::class, 'video']);

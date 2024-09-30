@@ -1,7 +1,8 @@
 @extends('layout.main')
 
+@section('title',"Home Page")
+
 @section('content')
-<div class="container mt-5">
-    <h1>Welcome To The Our Home Page</h1>
-</div>
+    <h1 class="text-center">Welcome To The Our Home Page</h1>
+   
 @endsection
