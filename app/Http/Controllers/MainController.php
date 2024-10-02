@@ -23,17 +23,9 @@ class MainController extends Controller
         ]);
     }
 
-    public function book()
-    {
-        $book = Book::all();
-        return view("book", compact('book'));
-    }
+    public function book() {}
 
-    public function detailBook(Book $book)
-    {
-        // $book = Book::find($ww);
-        return view('detail_book', compact('book'));
-    }
+    public function detailBook(Book $book) {}
 
     public function video()
     {

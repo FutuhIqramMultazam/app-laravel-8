@@ -9,6 +9,7 @@
           <a class="nav-link" href="/"><i class="fa-solid fa-house"></i> Home |</a>
           <a class="nav-link" href="/about"><i class="fa-solid fa-user"></i> About |</a>
           <a class="nav-link" href="/book"><i class="fa-solid fa-book"></i> Books |</a>
+          <a class="nav-link" href="/student"><i class="fa-solid fa-users"></i> Students |</a>
           {{-- <a class="nav-link" href="/video">Video padika</a> --}}
         </div>
       </div>
