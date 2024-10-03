@@ -12,6 +12,7 @@
     <h3>Dari tabel category </h3>
     <p> category name : <a href="/categoris/{{ $post->category->slug }}">{{ $post->category->name }}</a></p>
     <p> category slug: {{ $post->category->slug }}</p>
+    <p> User name: <a href="/user/{{ $post->user->id }}">{{ $post->user->name }}</a> </p>
     <hr class="mb-4">
 
     <a href="/" class="btn btn-danger"><i class="fa-solid fa-arrow-left"></i> Kembali</a>

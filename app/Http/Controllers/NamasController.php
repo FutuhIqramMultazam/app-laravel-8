@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
+use App\Models\Nama;
 use Illuminate\Http\Request;
 
-class PostsController extends Controller
+class NamasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class PostsController extends Controller
     public function index()
     {
         //
-        $post = Post::latest()->get();
-        return view('home', compact('post'));
+        $nama = Nama::all();
+        return view('student.list_nama', compact('nama'));
     }
 
     /**
@@ -46,10 +46,10 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show(Nama $nama)
     {
         //
-        return view('detail', compact('post'));
+        return view('student.detail_nama', compact('nama'));
     }
 
     /**
@@ -58,7 +58,7 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(Nama $nama)
     {
         //
     }
@@ -70,7 +70,7 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Nama $nama)
     {
         //
     }
@@ -81,7 +81,7 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(Nama $nama)
     {
         //
     }

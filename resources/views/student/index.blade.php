@@ -6,8 +6,9 @@
     <h1 class="text-center">Daftar Mahasiswa</h1>
 
     <div class="row justify-content-center text-center">
-      <div class="col-md-6">
-        <a href="/student/create" class="btn btn-success mt-3"><i class="fa-solid fa-plus"></i> Add Studetns <i class="fa-solid fa-user"></i></a>
+      <div class="col-md-6 ">
+        <a href="/student/create" class="btn btn-success mt-3"><i class="fa-solid fa-plus"></i> Add Students <i class="fa-solid fa-user"></i></a>
+        <a href="/nama" class="btn btn-info mt-3"><i class="fa-solid fa-eye"></i> Show List Names <i class="fa-solid fa-user-group"></i></a>
       </div>
     </div>
     

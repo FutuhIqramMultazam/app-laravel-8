@@ -1,10 +1,13 @@
 <?php
 
 use App\Http\Controllers\BooksController;
+use App\Http\Controllers\JurusansController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\NamasController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\StudentsController;
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,6 +37,10 @@ Route::post('/student', [StudentsController::class, 'store']);
 Route::delete('/student/destroy/{student}', [StudentsController::class, 'destroy']);
 Route::get('/student/edit/{student}', [StudentsController::class, 'edit']);
 Route::patch('/student/update/{student}', [StudentsController::class, 'update']); */
+Route::resource('student', StudentsController::class); // kalo mau pake cara ini harus sesuai dengan rout:list
+
+// nama
+Route::resource('nama', NamasController::class);
 
 // post
 Route::get('/', [PostsController::class, 'index']);
@@ -41,8 +48,15 @@ Route::get('/post/show/{post:slug}', [PostsController::class, 'show']);
 Route::get('/categoris/{category:slug}', function (Category $category) {
     return view('categoris', compact('category'));
 });
+Route::get('/user/{user}', function (User $user) {
+    // return view('categoris', compact('user'));
+    return $user->post();
+});
 
-Route::resource('student', StudentsController::class);// kalo mau pake cara ini harus sesuai dengan rout:list
+
+// jurusan
+Route::get('/jurusan/nama/{jurusan:slug}', [JurusansController::class, 'siapaAja']);
+Route::get('/jurusan', [JurusansController::class, 'index']);
 
 
 
